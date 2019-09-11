@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DAEF30422FE472400AE024F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAEF2FD22FE472400AE024F /* ViewController.swift */; };
+		2DAEF30522FE472400AE024F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEF2FE22FE472400AE024F /* Assets.xcassets */; };
+		2DAEF30622FE472400AE024F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEF30022FE472400AE024F /* LaunchScreen.storyboard */; };
+		2DAEF30722FE472400AE024F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEF30222FE472400AE024F /* Main.storyboard */; };
+		2DE343C022FD27CC00D857B9 /* KBDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE343BF22FD27CC00D857B9 /* KBDView.swift */; };
+		AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */; };
+		AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */; };
+		F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D077811EDC0A91001B0881 /* CameraController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2DAEF2FD22FE472400AE024F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = EyeSwipeRecorder/ViewController.swift; sourceTree = "<group>"; };
+		2DAEF2FE22FE472400AE024F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = EyeSwipeRecorder/Assets.xcassets; sourceTree = "<group>"; };
+		2DAEF30122FE472400AE024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DAEF30322FE472400AE024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		2DE343BF22FD27CC00D857B9 /* KBDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBDView.swift; sourceTree = "<group>"; };
+		AF7DD4CF1ED3AA28005C880E /* EyeSwipeRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeSwipeRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF7DD4DC1ED3AA28005C880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF7DD4DE1ED3AA28005C880E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D077811EDC0A91001B0881 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF7DD4CC1ED3AA28005C880E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DAEF2FF22FE472400AE024F /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2DAEF30022FE472400AE024F /* LaunchScreen.storyboard */,
+				2DAEF30222FE472400AE024F /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = EyeSwipeRecorder/Base.lproj;
+			sourceTree = "<group>";
+		};
+		AF7DD4C61ED3AA28005C880E = {
+			isa = PBXGroup;
+			children = (
+				2DAEF2FE22FE472400AE024F /* Assets.xcassets */,
+				2DAEF2FF22FE472400AE024F /* Base.lproj */,
+				2DAEF2FD22FE472400AE024F /* ViewController.swift */,
+				F4D077811EDC0A91001B0881 /* CameraController.swift */,
+				2DE343BF22FD27CC00D857B9 /* KBDView.swift */,
+				AF7DD4D11ED3AA28005C880E /* EyeSwipeRecorder */,
+				AF7DD4D01ED3AA28005C880E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF7DD4D01ED3AA28005C880E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF7DD4CF1ED3AA28005C880E /* EyeSwipeRecorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF7DD4D11ED3AA28005C880E /* EyeSwipeRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */,
+				AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */,
+				AF7DD4DE1ED3AA28005C880E /* Info.plist */,
+			);
+			path = EyeSwipeRecorder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF7DD4CE1ED3AA28005C880E /* EyeSwipeRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7DD4E11ED3AA28005C880E /* Build configuration list for PBXNativeTarget "EyeSwipeRecorder" */;
+			buildPhases = (
+				AF7DD4CB1ED3AA28005C880E /* Sources */,
+				AF7DD4CC1ED3AA28005C880E /* Frameworks */,
+				AF7DD4CD1ED3AA28005C880E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EyeSwipeRecorder;
+			productName = "AV Foundation";
+			productReference = AF7DD4CF1ED3AA28005C880E /* EyeSwipeRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF7DD4C71ED3AA28005C880E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = EyeSwipe;
+				TargetAttributes = {
+					AF7DD4CE1ED3AA28005C880E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = TP8P64EJ78;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AF7DD4CA1ED3AA28005C880E /* Build configuration list for PBXProject "EyeSwipeRecorder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = AF7DD4C61ED3AA28005C880E;
+			productRefGroup = AF7DD4D01ED3AA28005C880E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF7DD4CE1ED3AA28005C880E /* EyeSwipeRecorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF7DD4CD1ED3AA28005C880E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */,
+				2DAEF30522FE472400AE024F /* Assets.xcassets in Resources */,
+				2DAEF30722FE472400AE024F /* Main.storyboard in Resources */,
+				2DAEF30622FE472400AE024F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF7DD4CB1ED3AA28005C880E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DAEF30422FE472400AE024F /* ViewController.swift in Sources */,
+				2DE343C022FD27CC00D857B9 /* KBDView.swift in Sources */,
+				F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */,
+				AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2DAEF30022FE472400AE024F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DAEF30122FE472400AE024F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2DAEF30222FE472400AE024F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DAEF30322FE472400AE024F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF7DD4DC1ED3AA28005C880E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF7DD4DF1ED3AA28005C880E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF7DD4E01ED3AA28005C880E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF7DD4E21ED3AA28005C880E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TP8P64EJ78;
+				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.erif.als.recorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		AF7DD4E31ED3AA28005C880E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TP8P64EJ78;
+				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.erif.als.recorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF7DD4CA1ED3AA28005C880E /* Build configuration list for PBXProject "EyeSwipeRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7DD4DF1ED3AA28005C880E /* Debug */,
+				AF7DD4E01ED3AA28005C880E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7DD4E11ED3AA28005C880E /* Build configuration list for PBXNativeTarget "EyeSwipeRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7DD4E21ED3AA28005C880E /* Debug */,
+				AF7DD4E31ED3AA28005C880E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF7DD4C71ED3AA28005C880E /* Project object */;
+}

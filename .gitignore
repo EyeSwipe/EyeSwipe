@@ -1,0 +1,14 @@
+**/__pycache__
+**/.ipynb_checkpoints
+
+# Don't include any model checkpoints - we don't need those
+Checkpoints/*
+
+# These are all video/image files we don't need to back up
+Data (deprecated)/*
+Import (deprecated)/*
+SourceData (deprecated)/*
+
+# Many subdirectories have content we don't want to include but
+# descriptions in the READMEs that we do
+!**/*.md

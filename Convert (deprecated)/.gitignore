@@ -1,0 +1,9 @@
+# The local scripts rely on these files to be present, but they are
+# large and can easily be downloaded. These are described in this
+# directory's README
+#
+# Exclude: mmod_human_face_detector.dat, shape_predictor_68_face_landmarks.dat
+*.dat
+
+# also, per the README, we're leaving out namespace.json:
+namespace.json

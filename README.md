@@ -3,6 +3,11 @@
 Making a proper README is a priority. The project roadmap is in [roadmap.md](roadmap.md).
 
 
+## Sentences
+This directory serves as a workspace for two main functions. The primary use is the generation of sentences from YouTube subtitles, to give as labels for our data-collectors. This process will likely change soon, as we are planning to make a dedicated iOS app for data collection. The associated resources for this can be found in Sentences/Generation.
+
+The secondary use is the creation of a lexicon of ~14k words. The lexicon currently only serves to help in the generation of sentences, but it will eventually be used to inform our language model.
+
 ## Server
 
 

@@ -114,7 +114,7 @@
 				TargetAttributes = {
 					AF7DD4CE1ED3AA28005C880E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TP8P64EJ78;
+						DevelopmentTeam = Y2LT29S864;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -308,7 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TP8P64EJ78;
+				DEVELOPMENT_TEAM = Y2LT29S864;
 				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -323,7 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TP8P64EJ78;
+				DEVELOPMENT_TEAM = Y2LT29S864;
 				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

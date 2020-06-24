@@ -43,8 +43,9 @@ class ViewController: UIViewController {
 			letters += String(letter)
 			letters += "."
 		}
-		let utterance = AVSpeechUtterance(string: word + ". " + letters + " " + word)
+		let utterance = AVSpeechUtterance(string: word + ", " + letters + ", " + word)
 		utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.5
 		self.activateAudio()
 		self.synthesizer.speak(utterance)
 	}

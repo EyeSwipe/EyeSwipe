@@ -1,1 +1,0 @@
-../../Sentences/sentences.txt

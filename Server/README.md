@@ -62,8 +62,8 @@ Within the data directory, files are stored first according to userID, to make g
 After this, a video for a particular sentence is stored in its own directory, along with associated metadata.
 For uniqueness the directory name is the hash of the sentence whose video is being stored. If a user has n 
 videos on file for a sentence, the videos and their associated metadata files are numbered 1-n and stored in 
-the same directory. UserID is chosen on the app end; one good userID system could be hash(firstName + lastName +
-DOB).
+the same directory. UserID is chosen on the app end; a good choice would be to have users enter their emails,
+and permanently save userID as email or hash(email).
 
 Design update #1: Server is now stateless. After the new data pipeline was envisioned, it became clear that
 server management of userIDs, etc was unnecessary. All necessary data for both directions of data flow are 

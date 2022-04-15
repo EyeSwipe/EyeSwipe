@@ -12,6 +12,9 @@
 		2DAEF30622FE472400AE024F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEF30022FE472400AE024F /* LaunchScreen.storyboard */; };
 		2DAEF30722FE472400AE024F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAEF30222FE472400AE024F /* Main.storyboard */; };
 		2DE343C022FD27CC00D857B9 /* KBDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE343BF22FD27CC00D857B9 /* KBDView.swift */; };
+		50F8F27A25F3F56D003DC7DC /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8F27925F3F56D003DC7DC /* Server.swift */; };
+		50F8F27E26322EDB003DC7DC /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8F27C26322EDB003DC7DC /* IntroViewController.swift */; };
+		50F8F27F26322EDB003DC7DC /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F8F27D26322EDB003DC7DC /* IntroViewController.xib */; };
 		AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */; };
 		AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DD4DB1ED3AA28005C880E /* LaunchScreen.storyboard */; };
 		F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D077811EDC0A91001B0881 /* CameraController.swift */; };
@@ -23,6 +26,9 @@
 		2DAEF30122FE472400AE024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DAEF30322FE472400AE024F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		2DE343BF22FD27CC00D857B9 /* KBDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBDView.swift; sourceTree = "<group>"; };
+		50F8F27925F3F56D003DC7DC /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		50F8F27C26322EDB003DC7DC /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = EyeSwipeRecorder/IntroViewController.swift; sourceTree = "<group>"; };
+		50F8F27D26322EDB003DC7DC /* IntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IntroViewController.xib; path = EyeSwipeRecorder/IntroViewController.xib; sourceTree = "<group>"; };
 		AF7DD4CF1ED3AA28005C880E /* EyeSwipeRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeSwipeRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DD4D21ED3AA28005C880E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7DD4DC1ED3AA28005C880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,9 @@
 		AF7DD4C61ED3AA28005C880E = {
 			isa = PBXGroup;
 			children = (
+				50F8F27C26322EDB003DC7DC /* IntroViewController.swift */,
+				50F8F27D26322EDB003DC7DC /* IntroViewController.xib */,
+				50F8F27925F3F56D003DC7DC /* Server.swift */,
 				2DAEF2FE22FE472400AE024F /* Assets.xcassets */,
 				2DAEF2FF22FE472400AE024F /* Base.lproj */,
 				2DAEF2FD22FE472400AE024F /* ViewController.swift */,
@@ -114,7 +123,7 @@
 				TargetAttributes = {
 					AF7DD4CE1ED3AA28005C880E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Y2LT29S864;
+						DevelopmentTeam = 79PNL4UHWK;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
@@ -145,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7DD4DD1ED3AA28005C880E /* LaunchScreen.storyboard in Resources */,
+				50F8F27F26322EDB003DC7DC /* IntroViewController.xib in Resources */,
 				2DAEF30522FE472400AE024F /* Assets.xcassets in Resources */,
 				2DAEF30722FE472400AE024F /* Main.storyboard in Resources */,
 				2DAEF30622FE472400AE024F /* LaunchScreen.storyboard in Resources */,
@@ -158,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F8F27A25F3F56D003DC7DC /* Server.swift in Sources */,
 				2DAEF30422FE472400AE024F /* ViewController.swift in Sources */,
 				2DE343C022FD27CC00D857B9 /* KBDView.swift in Sources */,
+				50F8F27E26322EDB003DC7DC /* IntroViewController.swift in Sources */,
 				F4D077821EDC0A91001B0881 /* CameraController.swift in Sources */,
 				AF7DD4D31ED3AA28005C880E /* AppDelegate.swift in Sources */,
 			);
@@ -308,11 +320,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y2LT29S864;
+				DEVELOPMENT_TEAM = 79PNL4UHWK;
 				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.erif.als.recorder;
+				PRODUCT_BUNDLE_IDENTIFIER = EyeSwipeData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -323,11 +335,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y2LT29S864;
+				DEVELOPMENT_TEAM = 79PNL4UHWK;
 				INFOPLIST_FILE = EyeSwipeRecorder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.erif.als.recorder;
+				PRODUCT_BUNDLE_IDENTIFIER = EyeSwipeData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

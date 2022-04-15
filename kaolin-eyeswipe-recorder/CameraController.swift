@@ -10,6 +10,7 @@
 import AVFoundation
 import UIKit
 import Photos
+import CryptoKit
 
 class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 	var captureSession: AVCaptureSession?
@@ -19,11 +20,15 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 	var cancelling:Bool = false
 	
 	var previewLayer: AVCaptureVideoPreviewLayer?
+    
+    var userEmail : String?
+    var serverURL : String?
+    var currentSentence : String?
 	
 	private var movieFileOutput: AVCaptureMovieFileOutput?
 	private var backgroundRecordingID: UIBackgroundTaskIdentifier?
 	private let sessionQueue = DispatchQueue(label: "session queue") // Communicate with the session and other session objects on this queue.
-	
+ 
 	func displayPreview(on view: UIView) throws {
 		guard let captureSession = self.captureSession, captureSession.isRunning else { throw CameraControllerError.captureSessionIsMissing }
 		
@@ -32,7 +37,7 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 		self.previewLayer?.connection?.videoOrientation = .portrait
 		
 		view.layer.insertSublayer(self.previewLayer!, at: 0)
-		self.previewLayer?.frame = view.frame
+		//self.previewLayer?.frame = view.frame
 	}
 	
 	// from AVCam example, bits and hacks
@@ -51,6 +56,7 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 		guard let movieFileOutput = self.movieFileOutput else {
 			return
 		}
+        currentSentence = word
 		sessionQueue.async {
 			if !movieFileOutput.isRecording {
 				if UIDevice.current.isMultitaskingSupported {
@@ -68,13 +74,13 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 				// Update the orientation on the movie file output video connection before starting recording.
 				let movieFileOutputConnection = movieFileOutput.connection(with: .video)
 				//					movieFileOutputConnection?.videoOrientation = previewLayer?.orie
-				print("TODO: movie orientation???")
+                movieFileOutputConnection?.videoOrientation = AVCaptureVideoOrientation.landscapeRight
 				
-				let availableVideoCodecTypes = movieFileOutput.availableVideoCodecTypes
+				/*let availableVideoCodecTypes = movieFileOutput.availableVideoCodecTypes
 				
 				if availableVideoCodecTypes.contains(.hevc) {
 					movieFileOutput.setOutputSettings([AVVideoCodecKey: AVVideoCodecType.hevc], for: movieFileOutputConnection!)
-				}
+				}*/
 				
 				// Start recording to a temporary file.
 				let outputFileName = word + "_" + NSUUID().uuidString
@@ -139,7 +145,11 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 			cleanUp()
 		} else if success {
 			// Check authorization status.
-			PHPhotoLibrary.requestAuthorization { status in
+            
+            uploadVideo(paramName: "videoFile", fileName: "test", videoFile: outputFileURL, userEmail: self.userEmail!, serverURL : self.serverURL!, sentence: currentSentence!)
+            cleanUp()
+            // Below code saves video file to photo library, instead of uploading to server
+			/*PHPhotoLibrary.requestAuthorization { status in
 				if status == .authorized {
 					// Save the movie file to the photo library and cleanup.
 					PHPhotoLibrary.shared().performChanges({
@@ -159,7 +169,7 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 				}
 			}
 		} else {
-			cleanUp()
+			cleanUp()*/
 		}
 		
 		// Enable the Camera and Record buttons to let the user switch camera and start another recording.
@@ -169,6 +179,60 @@ class CameraController: NSObject, AVCaptureFileOutputRecordingDelegate {
 		}
 	}
 	
+}
+
+func uploadVideo(paramName: String, fileName: String, videoFile: URL, userEmail : String, serverURL : String, sentence: String) {
+    let url = URL(string: "http://\(serverURL):8080/data/upload")
+    let boundary = UUID().uuidString
+
+    let session = URLSession.shared
+    
+    var urlRequest = URLRequest(url: url!)
+    urlRequest.httpMethod = "POST"
+
+    urlRequest.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+    var data = Data()
+    
+    data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+    data.append("Content-Disposition: form-data; name=userID\r\n\r\n".data(using: .utf8)!)
+    if #available(iOS 13.0, *) {
+        let hashed = SHA256.hash(data: Data(userEmail.utf8)).description
+        let beginning = hashed.startIndex
+        let startIndex = hashed.index(beginning, offsetBy: 17)
+        let endIndex = hashed.index(startIndex, offsetBy: 16)
+        print(hashed[endIndex..<endIndex])
+        data.append("\(hashed[startIndex..<endIndex])".data(using: .utf8)!)
+    } else {
+        data.append("\(userEmail)".data(using: .utf8)!)
+    }
+    //let hashEmail = hashed!.description
+    
+    data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+    data.append("Content-Disposition: form-data; name=sentence\r\n\r\n".data(using: .utf8)!)
+    data.append("\(sentence)".data(using: .utf8)!)
+
+    data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
+    data.append("Content-Disposition: form-data; name=\"\(paramName)\"; filename=\"\(fileName)\"\r\n".data(using: .utf8)!)
+    data.append("Content-Type: video/mov\r\n\r\n".data(using: .utf8)!)
+    
+    do {
+        try data.append(Data(contentsOf: videoFile))
+    } catch {
+        print("Error uploading video file")
+    }
+
+    data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+
+    // Send a POST request to the URL, with the data we created earlier
+    session.uploadTask(with: urlRequest, from: data, completionHandler: { responseData, response, error in
+        if error == nil {
+            let jsonData = try? JSONSerialization.jsonObject(with: responseData!, options: .allowFragments)
+            if let json = jsonData as? [String: Any] {
+                print(json)
+            }
+        }
+    }).resume()
 }
 
 extension Notification.Name {
